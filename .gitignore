@@ -2,3 +2,4 @@ venv
 user-info-bot/__pycache__/
 *.py[cod]
 *$py.class
+user-info-bot/__pycache__/functions.cpython-311.pyc
