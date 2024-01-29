@@ -1,1 +1,4 @@
 venv
+user-info-bot/__pycache__/
+*.py[cod]
+*$py.class
