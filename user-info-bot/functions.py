@@ -18,4 +18,14 @@ async def get_user_info(message: Message, bot: Bot):
     else:
         await message.answer(matn, parse_mode="HTML")
 
-    
+async def start_answer(message: Message, bot: Bot):
+    await bot.send_message(message.from_user.id, f"Salom, {message.from_user.mention_html(f'{message.from_user.first_name}')}", parse_mode="HTML")
+
+async def help_answer(message: Message, bot: Bot):
+    matn = f"""
+        <b>Bot Buyruqlari</b>
+
+/start - Botni ishga tushurish
+/help Yordam!    
+"""
+    await bot.send_message(message.from_user.id, matn, parse_mode="HTML")
