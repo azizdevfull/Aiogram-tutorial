@@ -1,6 +1,7 @@
 from aiogram import Bot, Dispatcher
 from asyncio import run
-from functions import get_user_info, start_answer, help_answer
+from functions import get_user_info, sign_up_age, start_answer, help_answer, sign_up_name
+from states import sign_up
 from aiogram.types import BotCommand
 from aiogram.filters import Command
 
@@ -18,6 +19,8 @@ async def start():
 
     dp.message.register(start_answer, Command("start"))
     dp.message.register(help_answer, Command("help"))
+    dp.message.register(sign_up_name, sign_up.name)
+    dp.message.register(sign_up_age, sign_up.age)
 
     dp.message.register(get_user_info)
     

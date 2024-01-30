@@ -1,6 +1,5 @@
 from aiogram import Bot, Dispatcher, types
 from asyncio import run
-
 dp = Dispatcher()
 
 async def startup_answer(bot: Bot):

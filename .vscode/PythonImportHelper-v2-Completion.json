@@ -1,0 +1,197 @@
+[
+    {
+        "label": "Bot",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
+        "label": "Bot",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
+        "label": "Dispatcher",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
+        "label": "Bot",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
+        "label": "Dispatcher",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
+        "label": "types",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
+        "importPath": "aiogram.types",
+        "description": "aiogram.types",
+        "isExtraImport": true,
+        "detail": "aiogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "BotCommand",
+        "importPath": "aiogram.types",
+        "description": "aiogram.types",
+        "isExtraImport": true,
+        "detail": "aiogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "sign_up",
+        "importPath": "states",
+        "description": "states",
+        "isExtraImport": true,
+        "detail": "states",
+        "documentation": {}
+    },
+    {
+        "label": "sign_up",
+        "importPath": "states",
+        "description": "states",
+        "isExtraImport": true,
+        "detail": "states",
+        "documentation": {}
+    },
+    {
+        "label": "FSMContext",
+        "importPath": "aiogram.fsm.context",
+        "description": "aiogram.fsm.context",
+        "isExtraImport": true,
+        "detail": "aiogram.fsm.context",
+        "documentation": {}
+    },
+    {
+        "label": "run",
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "isExtraImport": true,
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "run",
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "isExtraImport": true,
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_info",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "sign_up_age",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "start_answer",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "help_answer",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "sign_up_name",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "Command",
+        "importPath": "aiogram.filters",
+        "description": "aiogram.filters",
+        "isExtraImport": true,
+        "detail": "aiogram.filters",
+        "documentation": {}
+    },
+    {
+        "label": "StatesGroup",
+        "importPath": "aiogram.fsm.state",
+        "description": "aiogram.fsm.state",
+        "isExtraImport": true,
+        "detail": "aiogram.fsm.state",
+        "documentation": {}
+    },
+    {
+        "label": "State",
+        "importPath": "aiogram.fsm.state",
+        "description": "aiogram.fsm.state",
+        "isExtraImport": true,
+        "detail": "aiogram.fsm.state",
+        "documentation": {}
+    },
+    {
+        "label": "dp",
+        "kind": 5,
+        "importPath": "user-info-bot.main",
+        "description": "user-info-bot.main",
+        "peekOfCode": "dp = Dispatcher()\nasync def startup_answer(bot: Bot):\n    await bot.send_message(1184193890, \"Bot Ishga tushdi! ✅\")\nasync def shutdown_answer(bot: Bot):\n    await bot.send_message(1184193890, \"Bot ishdan to'xtadi! ❌\")\nasync def start():\n    dp.startup.register(startup_answer)\n    dp.message.register(start_answer, Command(\"start\"))\n    dp.message.register(help_answer, Command(\"help\"))\n    dp.message.register(sign_up_name, sign_up.name)",
+        "detail": "user-info-bot.main",
+        "documentation": {}
+    },
+    {
+        "label": "sign_up",
+        "kind": 6,
+        "importPath": "user-info-bot.states",
+        "description": "user-info-bot.states",
+        "peekOfCode": "class sign_up(StatesGroup):\n    name = State()\n    age = State()",
+        "detail": "user-info-bot.states",
+        "documentation": {}
+    },
+    {
+        "label": "dp",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "dp = Dispatcher()\nasync def startup_answer(bot: Bot):\n    await bot.send_message(1184193890, \"Bot Ishga tushdi! ✅\")\nasync def shutdown_answer(bot: Bot):\n    await bot.send_message(1184193890, \"Bot ishdan to'xtadi! ❌\")\nasync def echo(message: types.Message, bot: Bot):\n    await message.copy_to(chat_id=message.chat.id)\nasync def start():\n    dp.startup.register(startup_answer)\n    dp.message.register(echo)",
+        "detail": "main",
+        "documentation": {}
+    }
+]
